@@ -1,0 +1,112 @@
+body {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    background-color: #183A1D;
+}
+
+.main-container {
+    display: grid;
+    grid-template: fit-content / 20px 1fr 20px;
+    grid-template-areas:". heading ."
+                        ". section ."
+                        ". input .";
+    text-align: center;
+    
+}
+
+h1 {
+    grid-area: heading;
+    font-family: 'Montserrat', sans-serif;
+    color: #FEFBE9;
+    border-top: 2px solid #FEFBE9;
+    border-bottom: 2px solid #FEFBE9;
+    margin-block: 15px;
+    
+}
+
+main > section:first-of-type {
+    grid-area: section;
+    display: grid;
+    grid-template: fit-content / 1fr;
+    gap: 0.83em;
+}
+
+section > h2 {
+    background-color: #F0A04B;
+    color: #FEFBE9;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    border-radius: 10px 10px 10px 10px;
+    line-height: 2.5;
+    text-decoration: underline;
+}
+
+
+#pendent, #completed {
+    width: 100%;
+    height: 0vh;
+    transition: height 0.50s;
+    border-radius: 0 0 10px 10px;
+    background-color: #F0A04B;
+}
+
+#pendent.list, #completed.list {
+    display: flex;
+    flex-flow: column;
+    height: 45vh;
+    transition: height 0.50s;
+}
+
+p > label {
+    color: #EEEEEE;
+}
+
+.input-section {
+    position: fixed;
+    height: fit-content;
+    top:calc(100vh - 131px);
+    border-radius: 20px 20px 0 0;
+    width: 100vw;
+    text-align: left;
+    background-color: #E1EEDD;
+
+}
+
+.input-section fieldset {
+    border: none;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    row-gap: 10px;
+}
+
+#newtask2 {
+    width: 90%;
+    outline: none;
+    border-color: #F0A04B;
+    border-radius: 20px;
+    font-size: 1.15rem;
+}
+
+legend {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+fieldset > button {
+    background-color: #F0A04B;
+    border: none;
+    border-radius: 10px;
+    padding-inline: 40px;
+    padding-block: 15px;
+    color: #FEFBE9;
+    font-weight: bolder;
+    transition: padding-inline 0.25s;
+}
+
+fieldset > button:active {
+    display: relative;
+    background-color: #183A1D;
+    padding-inline: calc(40px + 5px);
+    transition: background-color .25s, padding-inline .25s;
+}

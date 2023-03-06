@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To-Do List</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <main class="main-container">
+            <h1>To-Do List</h1>
+            <section>
+                <section id="pendent-container">
+                    <h2>Pendent Tasks</h2>
+                    <form id="pendent" class="list">
+    
+                    </form>
+                </section>
+                <section id="completed-container">
+                    <h2>Completed Tasks</h2>
+                    <form id="completed" class="">
+
+                    </form>
+                </section>
+            </section>
+            <section class="input-section">
+                <form id="form2">
+                    <fieldset>
+                        <legend>Add a new task to your list</legend>
+                        <label for="newtask2"></label>
+                        <input type="text" name="newtask2" id="newtask2" autocomplete="off" required>
+                        <button type="submit">Add New Task</button>
+                    </fieldset>
+                </form>
+            </section>
+
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
